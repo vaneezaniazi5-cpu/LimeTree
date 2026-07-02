@@ -1,5 +1,13 @@
 <form id="orderForm">
 
+<h2>Complete Your Order</h2>
+
+<label>Product</label>
+<input type="text" id="product" readonly>
+
+<label>Price</label>
+<input type="text" id="price" readonly>
+
 <label>* Full Name</label>
 <input type="text" placeholder="Enter your full name" required>
 
@@ -21,3 +29,13 @@
 <button type="submit">Place Order</button>
 
 </form>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+document.getElementById("product").value =
+params.get("product") || "";
+
+document.getElementById("price").value =
+"Rs. " + (params.get("price") || "");
+</script>
