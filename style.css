@@ -326,3 +326,77 @@ margin-bottom:15px;
 font-family:'Playfair Display',serif;
 
   }
+.products{
+padding:90px 8%;
+background:#f8f6f1;
+}
+
+.products h2{
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+font-family:'Playfair Display',serif;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.product-card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+position:relative;
+}
+
+.product-card:hover{
+transform:translateY(-8px);
+}
+
+.product-card img{
+width:100%;
+display:block;
+}
+
+.product-card h3{
+padding:15px 20px 5px;
+font-size:22px;
+}
+
+.fabric{
+padding:0 20px;
+color:#777;
+}
+
+.price{
+padding:10px 20px;
+font-size:24px;
+font-weight:bold;
+color:#556B2F;
+}
+
+.product-card .btn{
+display:block;
+margin:20px;
+text-align:center;
+}
+
+.badge{
+position:absolute;
+top:15px;
+left:15px;
+background:#556B2F;
+color:white;
+padding:6px 14px;
+border-radius:20px;
+font-size:13px;
+font-weight:bold;
+}
+
+.sale{
+background:#C9A227;
+  }
