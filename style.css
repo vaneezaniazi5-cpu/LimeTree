@@ -322,3 +322,25 @@ a{
 }
 
 }
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+z-index:1000;
+transition:.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+   }
