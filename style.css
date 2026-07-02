@@ -400,3 +400,100 @@ font-weight:bold;
 .sale{
 background:#C9A227;
   }
+.top-bar{
+background:#c79a2b;
+color:white;
+text-align:center;
+padding:10px;
+font-size:14px;
+font-weight:600;
+}
+
+.collections{
+padding:80px 8%;
+background:#faf8f3;
+}
+
+.collections h2{
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+font-family:'Playfair Display',serif;
+}
+
+.collection-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.collection-card{
+position:relative;
+overflow:hidden;
+border-radius:20px;
+box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+
+.collection-card img{
+width:100%;
+display:block;
+transition:.5s;
+}
+
+.collection-card:hover img{
+transform:scale(1.08);
+}
+
+.collection-overlay{
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+padding:25px;
+color:white;
+background:linear-gradient(transparent,rgba(0,0,0,.9));
+}
+
+.collection-overlay h3{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.collection-overlay p{
+margin-bottom:18px;
+}
+
+.promo{
+padding:90px 8%;
+text-align:center;
+background:#556B2F;
+color:white;
+}
+
+.promo h2{
+font-size:44px;
+font-family:'Playfair Display',serif;
+margin-bottom:20px;
+}
+
+.promo p{
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+font-size:18px;
+}
+
+.btn-outline{
+padding:14px 32px;
+border:2px solid white;
+border-radius:40px;
+color:white;
+text-decoration:none;
+margin-left:15px;
+transition:.3s;
+}
+
+.btn-outline:hover{
+background:white;
+color:#556B2F;
+  }
