@@ -344,9 +344,9 @@ transition:.3s;
 .whatsapp-float:hover{
 transform:scale(1.1);
    }
-/* ===========================
-   CHECKOUT PAGE
-=========================== */
+/* =========================
+   LimeTree Checkout
+========================= */
 
 .checkout{
 padding:140px 20px 80px;
@@ -368,35 +368,65 @@ box-shadow:0 15px 40px rgba(0,0,0,.12);
 
 .checkout-card h1{
 font-family:'Playfair Display',serif;
-font-size:40px;
+font-size:42px;
 text-align:center;
 margin-bottom:10px;
+color:#222;
 }
 
-.checkout-card p{
+.checkout-text{
 text-align:center;
 color:#666;
-margin-bottom:35px;
+margin-bottom:25px;
+}
+
+.product-summary{
+background:#f5f2e8;
+border-left:5px solid #C9A227;
+padding:20px;
+border-radius:12px;
+margin-bottom:30px;
+}
+
+.product-summary h2{
+font-size:24px;
+margin-bottom:8px;
+color:#556B2F;
+}
+
+.product-summary p{
+font-size:22px;
+font-weight:700;
+color:#C9A227;
 }
 
 .checkout form{
 display:flex;
 flex-direction:column;
-gap:15px;
+gap:16px;
 }
 
 .checkout label{
 font-weight:600;
+color:#333;
 }
 
 .checkout input,
 .checkout textarea{
 width:100%;
 padding:15px;
-border:1px solid #ddd;
-border-radius:10px;
 font-size:16px;
 font-family:'Poppins',sans-serif;
+border:1px solid #ddd;
+border-radius:10px;
+outline:none;
+transition:.3s;
+}
+
+.checkout input:focus,
+.checkout textarea:focus{
+border-color:#556B2F;
+box-shadow:0 0 8px rgba(85,107,47,.2);
 }
 
 .checkout textarea{
@@ -404,7 +434,26 @@ resize:vertical;
 }
 
 .checkout button{
-margin-top:15px;
-border:none;
-cursor:pointer;
+margin-top:10px;
+width:100%;
 }
+
+@media(max-width:768px){
+
+.checkout{
+padding:120px 15px 50px;
+}
+
+.checkout-card{
+padding:25px;
+}
+
+.checkout-card h1{
+font-size:32px;
+}
+
+.product-summary h2{
+font-size:20px;
+}
+
+   }
