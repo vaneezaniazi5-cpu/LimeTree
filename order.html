@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Complete Your Order | LimeTree</title>
+<title>LimeTree | Checkout</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -17,15 +17,14 @@
 <body>
 
 <div class="top-bar">
-🚚 Cash on Delivery Available Across Pakistan
+🚚 Cash on Delivery Available All Over Pakistan
 </div>
 
 <nav class="navbar">
 
-.logo a{
-color:white;
-text-decoration:none;
-}
+<div class="logo">
+<a href="index.html">LimeTree</a>
+</div>
 
 <ul class="nav-links">
 <li><a href="index.html">Home</a></li>
@@ -42,9 +41,21 @@ text-decoration:none;
 
 <h1>Complete Your Order</h1>
 
-<p>
-Please fill in your delivery details below.
+<p class="checkout-text">
+You're ordering
 </p>
+
+<div class="product-summary">
+
+<h2 id="productName">
+Loading...
+</h2>
+
+<p id="productPrice">
+Rs. 0
+</p>
+
+</div>
 
 <form id="orderForm">
 
@@ -69,8 +80,16 @@ required>
 <textarea
 id="address"
 rows="4"
-placeholder="House No, Street, Area, City"
+placeholder="House No, Street, Area"
 required></textarea>
+
+<label>* City</label>
+
+<input
+type="text"
+id="city"
+placeholder="Enter your city"
+required>
 
 <label>Area Code (Optional)</label>
 
@@ -79,13 +98,6 @@ type="text"
 id="area"
 placeholder="e.g. 54000">
 
-<label>Special Instructions (Optional)</label>
-
-<textarea
-id="instructions"
-rows="3"
-placeholder="Color preference, Call before delivery etc."></textarea>
-
 <label>Payment Method</label>
 
 <input
@@ -93,9 +105,11 @@ type="text"
 value="Cash on Delivery (COD)"
 readonly>
 
-<button type="submit" class="btn">
+<button
+type="submit"
+class="btn">
 
-Place Order on WhatsApp
+Place Order
 
 </button>
 
@@ -107,58 +121,24 @@ Place Order on WhatsApp
 <script>
 const params = new URLSearchParams(window.location.search);
 
-const product = params.get("product") || "Unspecified Product";
-const price = params.get("price") || "Not Available";
+const product = params.get("product") || "Premium Unstitched Suit";
+const price = params.get("price") || "0";
+
+document.getElementById("productName").textContent = product;
+document.getElementById("productPrice").textContent = "Rs. " + price;
 
 document.getElementById("orderForm").addEventListener("submit", function(e){
 
 e.preventDefault();
 
-const name = document.getElementById("name").value.trim();
-const phone = document.getElementById("phone").value.trim();
-const address = document.getElementById("address").value.trim();
-const area = document.getElementById("area").value.trim();
-const instructions = document.getElementById("instructions").value.trim();
+/* We will connect this to Google Sheets in the next step */
 
-const orderNumber = "LT-" + Date.now();
-
-const orderDate = new Date().toLocaleString("en-PK",{
-dateStyle:"medium",
-timeStyle:"short"
-});
-
-const message =
-`🛍️ *New LimeTree Order*
-
-🧾 Order Number: ${orderNumber}
-📅 Date: ${orderDate}
-
-📦 Product: ${product}
-💰 Price: Rs. ${price}
-
-👤 Customer: ${name}
-📞 Phone: ${phone}
-
-🏠 Delivery Address:
-${address}
-
-📍 Area Code: ${area || "N/A"}
-
-📝 Special Instructions:
-${instructions || "None"}
-
-💳 Payment Method:
-Cash on Delivery (COD)
-
-Thank you!`;
-
-window.open(
-`https://wa.me/923180148837?text=${encodeURIComponent(message)}`,
-"_blank"
+alert(
+"Your order details are ready.\n\nNext we'll connect LimeTree to Google Sheets so orders are saved automatically."
 );
 
 });
 </script>
 
 </body>
-  </html>
+</html>
