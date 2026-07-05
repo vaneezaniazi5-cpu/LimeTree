@@ -119,32 +119,27 @@ Place Order
 </div>
 
 </section>
+<script>
+const params = new URLSearchParams(window.location.search);
+
+const product = params.get("product") || "Premium Unstitched Suit";
+const price = params.get("price") || "0";
+
+document.getElementById("productName").textContent = product;
+document.getElementById("productPrice").textContent = "Rs. " + price;
+
 document.getElementById("orderForm").addEventListener("submit", function(e){
 
 e.preventDefault();
 
-const name = document.getElementById("name").value;
-const phone = document.getElementById("phone").value;
-const address = document.getElementById("address").value;
-const city = document.getElementById("city").value;
-const area = document.getElementById("area").value;
+alert("🎉 Thank you for shopping with LimeTree!\n\nYour order has been placed successfully.\n\nOur team will contact you soon to confirm your order.");
 
-alert(
-`Order Details
+document.getElementById("orderForm").reset();
 
-Product: ${product}
-Price: Rs. ${price}
-
-Customer: ${name}
-Phone: ${phone}
-Address: ${address}
-City: ${city}
-Area Code: ${area || "N/A"}
-
-Next we'll save this automatically to the database.`
-);
+window.location.href = "index.html";
 
 });
+</script>
 
 </body>
 </html>
