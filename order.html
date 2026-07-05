@@ -156,9 +156,9 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
         document.getElementById("orderForm").reset();
     })
     .catch(err=>{
-        alert("❌ Something went wrong. Please try again.");
-        console.log(err);
-    });
+    alert(err);
+    console.log(err);
+});
 
 });
 </script>
