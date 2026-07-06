@@ -42,9 +42,9 @@ Premium Unstitched Collections for Every Season
 
 <div class="search-box">
 
-<input type="text" placeholder="Search collections...">
+<button onclick="searchProduct()">Search</button>
 
-<button>Search</button>
+<button onclick="searchProduct()">Search</button>
 
 </div>
 
@@ -183,5 +183,56 @@ showSlide(current);
 
 });
   </script>
+<script>
+function searchProduct(){
+
+    const search = document.getElementById("searchInput").value.toLowerCase().trim();
+
+    // Summer Collection
+    if(
+        search.includes("maria") ||
+        search.includes("maria b") ||
+        search.includes("3010") ||
+        search.includes("mpt") ||
+        search.includes("amaltas") ||
+        search.includes("1608") ||
+
+        search.includes("sana safinaz") ||
+        search.includes("sanasafinaz") ||
+        search.includes("beechtree") ||
+        search.includes("beech tree") ||
+        search.includes("limelight") ||
+        search.includes("sapphire") ||
+        search.includes("sephrie") ||
+        search.includes("alkaram") ||
+        search.includes("alkaram studio") ||
+        search.includes("khaadi") ||
+        search.includes("khadi") ||
+        search.includes("gul ahmed") ||
+        search.includes("ethnic") ||
+        search.includes("cross stitch") ||
+        search.includes("crossstitch") ||
+        search.includes("generation") ||
+        search.includes("junaid jamshed") ||
+        search.includes("j.") ||
+        search.includes("bonanza") ||
+        search.includes("ideas") ||
+        search.includes("charizma") ||
+        search.includes("nishat") ||
+        search.includes("asim jofa") ||
+        search.includes("ramsha") ||
+        search.includes("zellbury") ||
+        search.includes("unstitched") ||
+        search.includes("lawn")
+    ){
+        window.location.href="summer.html";
+    }
+
+    else{
+        alert("No product found.");
+    }
+
+}
+</script>
 </body>
 </html>
