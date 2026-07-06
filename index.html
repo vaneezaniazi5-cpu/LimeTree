@@ -104,7 +104,20 @@ Exclusive Sale
 
 <span class="badge new">NEW ARRIVAL</span>
 
-<img src="images/IMG-20260706-WA0013.jpg" alt="Amaltas 1608">
+<div class="slider">
+
+<img class="slide active"
+src="images/IMG-20260706-WA0013.jpg">
+
+<img class="slide"
+src="images/IMG-20260706-WA0041.jpg">
+
+</div>
+
+<div class="dots">
+<span class="dot active"></span>
+<span class="dot"></span>
+</div>
 
 <div class="product-info">
 
@@ -124,5 +137,51 @@ View Details
   <a href="https://wa.me/923180148837" class="whatsapp-float" target="_blank">
     💬
   </a>
+  <script>
+document.querySelectorAll(".slider").forEach(slider => {
+
+const slides = slider.querySelectorAll(".slide");
+
+let current = 0;
+
+function showSlide(index){
+slides.forEach((slide,i)=>{
+slide.style.display = i===index ? "block" : "none";
+});
+}
+
+showSlide(current);
+
+slider.addEventListener("click",function(){
+current=(current+1)%slides.length;
+showSlide(current);
+});
+
+let startX=0;
+
+slider.addEventListener("touchstart",e=>{
+startX=e.touches[0].clientX;
+});
+
+slider.addEventListener("touchend",e=>{
+
+let endX=e.changedTouches[0].clientX;
+
+if(Math.abs(startX-endX)>40){
+
+if(endX<startX){
+current=(current+1)%slides.length;
+}else{
+current=(current-1+slides.length)%slides.length;
+}
+
+showSlide(current);
+
+}
+
+});
+
+});
+  </script>
 </body>
 </html>
