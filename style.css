@@ -32,8 +32,8 @@ a{
     background:#c9a227;
     color:#fff;
     text-align:center;
-    padding:10px;
-    font-size:14px;
+    padding:6px;
+    font-size:13px;
     font-weight:600;
 }
 
@@ -45,14 +45,14 @@ a{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 8%;
+    padding:12px 6%;
     background:rgba(85,107,47,.95);
     backdrop-filter:blur(8px);
     z-index:999;
 }
 
 .logo{
-    font-size:34px;
+    font-size:30px;
     font-family:'Playfair Display',serif;
     color:#fff;
 }
@@ -74,14 +74,15 @@ a{
 }
 
 .hero{
-    height:60vh;
+    height:52vh;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
+    padding:20px;
     background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url("images/hero-cover1.png");
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("images/hero-cover1.png");
     background-size:cover;
     background-position:center;
 }
@@ -93,7 +94,7 @@ url("images/hero-cover1.png");
 }
 
 .hero h1{
-    font-size:64px;
+    font-size:52px;
     font-family:'Playfair Display',serif;
     margin-bottom:20px;
 }
@@ -107,7 +108,7 @@ url("images/hero-cover1.png");
     display:flex;
     justify-content:center;
     gap:10px;
-    margin-bottom:30px;
+    margin-bottom:18px;
     flex-wrap:wrap;
 }
 
@@ -457,10 +458,7 @@ font-size:20px;
 }
 
    }
-<div class="product-image">
-    <img class="front-img" src="images/IMG-20260706-WA0058.jpg" alt="Dress 2">
-    <img class="back-img" src="images/IMG-20260706-WA0043.jpg" alt="Dress 2 Back">
-</div>
+
 /* Product Slider */
 
 .slider{
