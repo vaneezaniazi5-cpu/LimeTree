@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Summer Collection | LimeTree</title>
 
 <link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -37,11 +41,27 @@
 
 <div class="product-grid">
 
+<!-- PRODUCT 1 -->
+
 <div class="product-card">
 
 <span class="badge sale">SALE</span>
 
-<img src="images/IMG-20260706-WA0019.jpg" style="width:100%;">
+<div class="slider">
+
+<img class="slide active"
+src="images/IMG-20260706-WA0019.jpg">
+
+<img class="slide"
+src="images/IMG-20260706-WA0066.jpg">
+
+</div>
+
+<div class="dots">
+<span class="dot active"></span>
+<span class="dot"></span>
+</div>
+
 <div class="product-info">
 
 <h3>Maria. B. Lawn MPT 3010-A</h3>
@@ -57,21 +77,31 @@ Printed Trouser
 <strong>Rs. 3,950</strong>
 </p>
 
-<a class="btn" href="order.html?product=Premium%20Unstitched%20Suit%201&price=3950">
+<a class="btn"
+href="order.html?product=Maria.%20B.%20Lawn%20MPT%203010-A&price=3950">
 Order Now
 </a>
 
 </div>
-
-</div>
+<!-- PRODUCT 2 -->
 
 <div class="product-card">
 
 <span class="badge sale">SALE</span>
 
-<div class="product-image">
-    <img class="front-img" src="images/IMG-20260706-WA0058.jpg" alt="Dress 2">
-    <img class="back-img" src="images/IMG-20260706-WA0043.jpg" alt="Dress 2 Back">
+<div class="slider">
+
+<img class="slide active"
+src="images/IMG-20260706-WA0058.jpg">
+
+<img class="slide"
+src="images/IMG-20260706-WA0043.jpg">
+
+</div>
+
+<div class="dots">
+<span class="dot active"></span>
+<span class="dot"></span>
 </div>
 
 <div class="product-info">
@@ -89,18 +119,35 @@ Printed Trouser
 <strong>Rs. 3,950</strong>
 </p>
 
-<a class="btn" href="order.html?product=Premium%20Unstitched%20Suit%202&price=3950">
+<a class="btn"
+href="order.html?product=Maria.%20B.%20Lawn%20MPT%203010-B&price=3950">
 Order Now
 </a>
 
 </div>
 
 </div>
+
+<!-- PRODUCT 3 -->
+
 <div class="product-card">
 
-<span class="badge sale">NEW</span>
+<span class="badge new">NEW</span>
 
-<img src="images/IMG-20260706-WA0013.jpg" width="100%">
+<div class="slider">
+
+<img class="slide active"
+src="images/IMG-20260706-WA0013.jpg">
+
+<img class="slide"
+src="images/IMG-20260706-WA0041.jpg">
+
+</div>
+
+<div class="dots">
+<span class="dot active"></span>
+<span class="dot"></span>
+</div>
 
 <div class="product-info">
 
@@ -110,20 +157,87 @@ Order Now
 <strong>Rs. 4,995</strong>
 </p>
 
-<a class="btn" href="order.html?product=Amaltas%201608&price=4995">
+<a class="btn"
+href="order.html?product=Amaltas%201608&price=4995">
 Order Now
 </a>
 
 </div>
 
 </div>
+
 </div>
 
 </section>
 
-<a href="https://wa.me/923180148837" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/923180148837"
+class="whatsapp-float"
+target="_blank">
+
 💬
-</a>
+
+    </a>
+                                 </div>
+    <script>
+document.querySelectorAll(".slider").forEach(slider => {
+
+const slides = slider.querySelectorAll(".slide");
+
+let current = 0;
+
+function showSlide(index){
+
+slides.forEach((slide,i)=>{
+slide.style.display = i===index ? "block" : "none";
+});
+
+}
+
+showSlide(current);
+
+slider.addEventListener("click",function(){
+
+current++;
+
+if(current>=slides.length){
+current=0;
+}
+
+showSlide(current);
+
+});
+
+let startX=0;
+
+slider.addEventListener("touchstart",e=>{
+startX=e.touches[0].clientX;
+});
+
+slider.addEventListener("touchend",e=>{
+
+let endX=e.changedTouches[0].clientX;
+
+if(Math.abs(startX-endX)>40){
+
+if(endX<startX){
+
+current=(current+1)%slides.length;
+
+}else{
+
+current=(current-1+slides.length)%slides.length;
+
+}
+
+showSlide(current);
+
+}
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
