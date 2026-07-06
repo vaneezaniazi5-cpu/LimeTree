@@ -1,1 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Exclusive Sale | LimeTree</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="top-bar">
+🔥 Exclusive Sale - Limited Stock Available
+</div>
+
+<nav class="navbar">
+
+<div class="logo">
+<a href="index.html">LimeTree</a>
+</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="summer.html">Summer</a></li>
+<li><a href="sale.html">Exclusive Sale</a></li>
+<li><a href="winter.html">Winter</a></li>
+</ul>
+
+</nav>
+
+<section class="new-arrivals">
+
+<h2>Exclusive Sale</h2>
+
+<div class="product-grid">
+
+<!-- PRODUCT 1 -->
+
+<div class="product-card">
+
+<span class="badge sale">50% OFF</span>
+
+<div class="slider">
+
+<img class="slide active"
+src="images/IMG-20260706-WA0019.jpg">
+
+<img class="slide"
+src="images/IMG-20260706-WA0066.jpg">
+
+</div>
+
+<div class="dots">
+<span class="dot active"></span>
+<span class="dot"></span>
+</div>
+
+<div class="product-info">
+
+<h3>Maria. B. Lawn MPT 3010-A</h3>
+
+<p class="price">
+<del>Rs. 5,750</del><br>
+<strong>Rs. 3,950</strong>
+</p>
+
+<a class="btn"
+href="order.html?product=Maria.%20B.%20Lawn%20MPT%203010-A&price=3950">
+Order Now
+</a>
+
+</div>
+
+</div>
+  <!-- PRODUCT 2 -->
+
+<div class="product-card">
+
+<span class="badge sale">SALE</span>
+
+<div class="slider">
+
+<img class="slide active"
+src="images/IMG-20260706-WA0058.jpg">
+
+<img class="slide"
+src="images/IMG-20260706-WA0043.jpg">
+
+</div>
+
+<div class="dots">
+<span class="dot active"></span>
+<span class="dot"></span>
+</div>
+
+<div class="product-info">
+
+<h3>Maria. B. Lawn MPT 3010-B</h3>
+
+<p class="price">
+<del>Rs. 5,750</del><br>
+<strong>Rs. 3,950</strong>
+</p>
+
+<a class="btn"
+href="order.html?product=Maria.%20B.%20Lawn%20MPT%203010-B&price=3950">
+Order Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<a href="https://wa.me/923180148837"
+class="whatsapp-float"
+target="_blank">
+💬
+</a>
+
+<script>
+document.querySelectorAll(".slider").forEach(slider => {
+
+const slides = slider.querySelectorAll(".slide");
+
+let current = 0;
+
+function showSlide(index){
+slides.forEach((slide,i)=>{
+slide.style.display = i===index ? "block" : "none";
+});
+}
+
+showSlide(current);
+
+slider.addEventListener("click",function(){
+current=(current+1)%slides.length;
+showSlide(current);
+});
+
+let startX=0;
+
+slider.addEventListener("touchstart",e=>{
+startX=e.touches[0].clientX;
+});
+
+slider.addEventListener("touchend",e=>{
+
+let endX=e.changedTouches[0].clientX;
+
+if(Math.abs(startX-endX)>40){
+
+if(endX<startX){
+current=(current+1)%slides.length;
+}else{
+current=(current-1+slides.length)%slides.length;
+}
+
+showSlide(current);
+
+}
+
+});
+
+});
+</script>
+
+</body>
+</html>
