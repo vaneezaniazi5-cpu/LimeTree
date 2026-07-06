@@ -461,3 +461,39 @@ font-size:20px;
     <img class="front-img" src="images/IMG-20260706-WA0058.jpg" alt="Dress 2">
     <img class="back-img" src="images/IMG-20260706-WA0043.jpg" alt="Dress 2 Back">
 </div>
+/* Product Slider */
+
+.slider{
+position:relative;
+cursor:pointer;
+overflow:hidden;
+border-radius:18px;
+}
+
+.slide{
+display:none;
+width:100%;
+}
+
+.slide.active{
+display:block;
+}
+
+.dots{
+display:flex;
+justify-content:center;
+gap:6px;
+margin-top:10px;
+margin-bottom:10px;
+}
+
+.dot{
+width:8px;
+height:8px;
+border-radius:50%;
+background:#ccc;
+}
+
+.dot.active{
+background:#556B2F;
+   }
