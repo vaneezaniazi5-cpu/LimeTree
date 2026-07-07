@@ -303,23 +303,31 @@ a{
 
 @media(max-width:768px){
 
-.navbar{
-    flex-direction:column;
-    gap:15px;
-}
-
-.nav-links{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
+.hero{
+    height:58vh;
 }
 
 .hero h1{
-    font-size:42px;
+    font-size:32px;
+    line-height:1.15;
 }
 
 .hero p{
-    font-size:18px;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    gap:12px;
+}
+
+.btn,
+.btn-outline{
+    padding:12px 24px;
+    font-size:16px;
 }
 
 }
