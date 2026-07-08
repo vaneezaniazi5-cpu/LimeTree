@@ -51,7 +51,7 @@ Search
 </button>
 
 </div>
-
+<p id="searchMessage" style="color:white; margin-top:10px;"></p>
 <div class="hero-buttons">
 
 <a href="summer.html" class="btn">
@@ -233,7 +233,7 @@ function searchProduct(){
     }
 
     else{
-        alert("No product found.");
+    document.getElementById("searchMessage").textContent = "No product found.";
     }
 
 }
