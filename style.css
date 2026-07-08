@@ -303,6 +303,23 @@ a{
 
 @media(max-width:768px){
 
+.navbar{
+    padding:12px 4%;
+}
+
+.logo{
+    font-size:24px;
+}
+
+.nav-links{
+    gap:12px;
+}
+
+.nav-links a{
+    font-size:13px;
+    font-weight:600;
+}
+
 .hero{
     height:58vh;
 }
