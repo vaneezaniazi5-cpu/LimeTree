@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart | LimeTree</title>
 
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="top-bar">
+<marquee>🚚 FREE DELIVERY ALL ACROSS PAKISTAN 🇵🇰</marquee>
+</div>
+
+<nav class="navbar">
+
+<div class="logo">
+<a href="index.html">
+<img src="images/Gold-logo.png" alt="LimeTree Logo">
+</a>
+</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="summer.html">Summer</a></li>
+<li><a href="sale.html">Sale</a></li>
+<li><a href="winter.html">Winter</a></li>
+<li><a href="cart.html">🛒 <span id="cart-count">0</span></a></li>
+</ul>
+
+</nav>
+
+<section class="checkout">
+
+<div class="checkout-card">
+
+<h1>Your Cart</h1>
+
+<div id="cart-items"></div>
+
+<h2 id="total"></h2>
+
+<a href="summer.html" class="btn">Continue Shopping</a>
+
+</div>
+
+</section>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let container = document.getElementById("cart-items");
+
+let total = 0;
+
+cart.forEach((item,index)=>{
+
+total += item.price;
+
+container.innerHTML += `
+<div class="product-summary">
+<h2>${item.product}</h2>
+<p>Rs. ${item.price}</p>
+
+<button class="btn"
+onclick="removeItem(${index})">
+Remove
+</button>
+
+</div>
+`;
+
+});
+
+document.getElementById("total").innerHTML =
+"Total: Rs. " + total;
+
+document.getElementById("cart-count").textContent = cart.length;
+
+function removeItem(index){
+
+cart.splice(index,1);
+
+localStorage.setItem("cart",JSON.stringify(cart));
+
+location.reload();
+
+}
+</script>
+
+</body>
+</html>
