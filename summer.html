@@ -28,6 +28,21 @@ localStorage.setItem("cart",JSON.stringify(cart));
 alert(product + " added to cart!");
 }
 </script>
+    <script>
+function updateCartCount(){
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let count = document.getElementById("cart-count");
+
+    if(count){
+        count.textContent = cart.length;
+    }
+
+}
+
+updateCartCount();
+    </script>
 <body>
 
 <div class="announcement-bar">
