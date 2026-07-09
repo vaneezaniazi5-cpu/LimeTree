@@ -46,7 +46,7 @@ a{
     justify-content:space-between;
     align-items:center;
     padding:12px 6%;
-    background:rgba(85,107,47,.95);
+    background:F8F6F1;
     backdrop-filter:blur(8px);
     z-index:999;
 }
