@@ -17,6 +17,7 @@ body{
     background:#f8f6f1;
     color:#222;
     line-height:1.6;
+   padding-top:100px;
 }
 
 img{
@@ -39,7 +40,7 @@ a{
 
 .navbar{
     position:fixed;
-    top:0;
+    top:40px;
     left:0;
     width:100%;
     display:flex;
@@ -534,7 +535,7 @@ background:#556B2F;
     top:0;
     left:0;
     width:100%;
-    z-index:1000;
+    z-index:1001;
 }
 
 .announcement-text{
