@@ -188,10 +188,18 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
         body:JSON.stringify(order)
     })
     .then(res=>res.json())
-    .then(data=>{
-        alert("✅ Thank you! Your order has been placed successfully.");
-        document.getElementById("orderForm").reset();
-    })
+.then(data=>{
+
+    localStorage.removeItem("checkoutCart");
+    localStorage.removeItem("cart");
+
+    alert("✅ Thank you! Your order has been placed successfully.");
+
+    document.getElementById("orderForm").reset();
+
+    window.location.href="index.html";
+
+})
     .catch(err=>{
     alert(err);
     console.log(err);
