@@ -13,7 +13,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 </head>
+<script>
+function addToCart(product,price){
 
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+cart.push({
+    product:product,
+    price:price
+});
+
+localStorage.setItem("cart",JSON.stringify(cart));
+
+alert(product + " added to cart!");
+}
+</script>
 <body>
 
 <div class="announcement-bar">
@@ -196,10 +210,19 @@ src="images/Ramsha-lawn-RS02(2).jpg">
 <strong>Rs. 3,850</strong>
 </p>
 
+<div class="product-buttons">
+
+<button class="cart-btn"
+onclick="addToCart('Ramsha Lawn RS02',3850)">
+🛒 Cart
+</button>
+
 <a class="btn"
 href="order.html?product=Ramsha%20Lawn%20RS02&price=3850">
 Order Now
 </a>
+
+</div>
 
     </div>
 </div>
