@@ -10,6 +10,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 </head>
+    <script>
+function updateCartCount(){
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let count = document.getElementById("cart-count");
+
+    if(count){
+        count.textContent = cart.length;
+    }
+
+}
+
+updateCartCount();
+    </script>
 <body>
 
 <div class="announcement-bar">
