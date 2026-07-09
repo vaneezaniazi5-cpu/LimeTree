@@ -51,10 +51,10 @@ a{
     z-index:999;
 }
 
-.logo{
-    font-size:30px;
-    font-family:'Playfair Display',serif;
-    color:#fff;
+.logo img{
+    height:50px;
+    width:auto;
+    display:block;
 }
 
 .nav-links{
