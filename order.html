@@ -140,11 +140,32 @@ const WEB_APP_URL = "https://script.google.com/macros/s/AKfycby58WSaMXp3O516Uuw0
 
 const params = new URLSearchParams(window.location.search);
 
-const product = params.get("product") || "Premium Unstitched Suit";
-const price = params.get("price") || "0";
+let product = "";
+let price = 0;
 
-document.getElementById("productName").textContent = product;
-document.getElementById("productPrice").textContent = "Rs. " + price;
+const cart = JSON.parse(localStorage.getItem("checkoutCart"));
+
+if(cart && cart.length > 0){
+
+    product = "";
+
+    cart.forEach(item=>{
+        product += item.product + " - Rs. " + item.price + "\n";
+        price += Number(item.price);
+    });
+
+}else{
+
+    product = params.get("product") || "Premium Unstitched Suit";
+    price = Number(params.get("price")) || 0;
+
+}
+
+document.getElementById("productName").innerHTML =
+product.replace(/\n/g,"<br>");
+
+document.getElementById("productPrice").textContent =
+"Total: Rs. " + price;
 
 document.getElementById("orderForm").addEventListener("submit", function(e){
 
