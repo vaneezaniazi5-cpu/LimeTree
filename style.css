@@ -557,3 +557,28 @@ background:#556B2F;
 .navbar{
     top:40px;
 }
+.product-buttons{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+.product-buttons .btn{
+    flex:1;
+    text-align:center;
+}
+
+.cart-btn{
+    background:#556B2F;
+    color:#fff;
+    border:none;
+    border-radius:35px;
+    padding:14px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.cart-btn:hover{
+    background:#445622;
+}
