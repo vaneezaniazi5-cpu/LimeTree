@@ -99,6 +99,12 @@ localStorage.setItem("cart",JSON.stringify(cart));
 location.reload();
 
 }
+  function checkoutCart(){
+
+    localStorage.setItem("checkoutCart", JSON.stringify(cart));
+
+    window.location.href = "order.html";
+  }
 </script>
 
 </body>
