@@ -67,6 +67,7 @@ a{
 .nav-links a{
     color:#fff;
     font-weight:500;
+   font-size:15px
     transition:.3s;
 }
 
