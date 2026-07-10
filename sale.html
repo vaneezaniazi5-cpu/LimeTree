@@ -56,106 +56,9 @@ updateCartCount();
 
 <section class="new-arrivals">
 
-<h2>Exclusive Sale</h2>
+    <h2>Exclusive Sale</h2>
 
-<div class="product-grid">
-
-<!-- PRODUCT 1 -->
-
-<div class="product-card">
-
-<span class="badge sale">SALE</span>
-
-<div class="slider">
-
-<img class="slide active"
-src="images/IMG-20260706-WA0019.jpg">
-
-<img class="slide"
-src="images/IMG-20260706-WA0066.jpg">
-
-</div>
-
-<div class="dots">
-<span class="dot active"></span>
-<span class="dot"></span>
-</div>
-
-<div class="product-info">
-
-<h3>Maria. B. Lawn MPT 3010-A</h3>
-
-<p class="price">
-<del>Rs. 5,750</del><br>
-<strong>Rs. 3,950</strong>
-</p>
-
-<div class="product-buttons">
-
-<button class="cart-btn"
-onclick="addToCart('Maria B Lawn MPT 3010-A',3950)">
-🛒 Cart
-</button>
-
-<a class="btn"
-href="order.html?product=Maria.%20B.%20Lawn%20MPT%203010-A&price=3950">
-Order Now
-</a>
-
-</div>
-
-</div>
-
-</div>
-  <!-- PRODUCT 2 -->
-
-<div class="product-card">
-
-<span class="badge sale">SALE</span>
-
-<div class="slider">
-
-<img class="slide active"
-src="images/IMG-20260706-WA0058.jpg">
-
-<img class="slide"
-src="images/IMG-20260706-WA0043.jpg">
-
-</div>
-
-<div class="dots">
-<span class="dot active"></span>
-<span class="dot"></span>
-</div>
-
-<div class="product-info">
-
-<h3>Maria. B. Lawn MPT 3010-B</h3>
-
-<p class="price">
-<del>Rs. 5,750</del><br>
-<strong>Rs. 3,950</strong>
-</p>
-
-<div class="product-buttons">
-
-<button class="cart-btn"
-onclick="addToCart('Maria B Lawn MPT 3010-B',3950)">
-🛒 Cart
-</button>
-
-<a class="btn"
-href="order.html?product=Maria.%20B.%20Lawn%20MPT%203010-B&price=3950">
-Order Now
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+    <div class="product-grid" id="productGrid"></div>
 
 </section>
 
@@ -211,6 +114,7 @@ showSlide(current);
 
 });
 </script>
-
+<script src="products.js"></script>
+<script src="sale.js"></script>
 </body>
 </html>
