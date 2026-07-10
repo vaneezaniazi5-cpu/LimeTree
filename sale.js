@@ -1,5 +1,7 @@
 const productGrid = document.getElementById("productGrid");
-
+const saleProducts = products.filter(product =>
+    product.category.includes("sale")
+);
 saleProducts.forEach(product => {
 
 let badgeClass = "new";
