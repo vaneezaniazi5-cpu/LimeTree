@@ -43,5 +43,14 @@ const products = [
     front: "images/Ramsha-lawn-RS02.jpg",
     back: "images/Ramsha-lawn-RS02(2).jpg"
 }
-
+{
+    name: "Qalamkar Chikankari SA-09",
+    category: ["summer", "sale"],
+    fabric: "Shirt: Cotton | Trouser: Cotton | Dupatta: Net",
+    price: 7999,
+    oldPrice: 16790,
+    badge: "SALE",
+    front: "images/qalamqar-sa-09(1).jpg",
+    back: "images/qalamqar-sa-09(2).jpg"
+},
 ];
