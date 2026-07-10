@@ -2,6 +2,7 @@ const products = [
 
 {
     name: "Maria. B. Lawn MPT 3010-A",
+    category: ["summer","sale"],
     fabric: "Double Shaded Printed Lawn Shirt<br>Printed Chiffon Dupatta<br>Printed Trouser",
     price: 3950,
     oldPrice: 5750,
@@ -12,6 +13,7 @@ const products = [
 
 {
     name: "Maria. B. Lawn MPT 3010-B",
+    category: ["summer","sale"],
     fabric: "Double Shaded Printed Lawn Shirt<br>Printed Chiffon Dupatta<br>Printed Trouser",
     price: 3950,
     oldPrice: 5750,
@@ -22,6 +24,7 @@ const products = [
 
 {
     name: "Amaltas 1608",
+    category: ["summer"],
     fabric: "",
     price: 4995,
     oldPrice: null,
@@ -32,6 +35,7 @@ const products = [
 
 {
     name: "Ramsha Lawn RS02",
+    category: ["summer"],
     fabric: "",
     price: 3850,
     oldPrice: null,
