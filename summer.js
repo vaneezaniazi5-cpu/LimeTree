@@ -1,6 +1,10 @@
 const productGrid = document.getElementById("productGrid");
 
-products.forEach(product => {
+const summerProducts = products.filter(product =>
+    product.category.includes("summer")
+);
+
+summerProducts.forEach(product => {
 
 let badgeClass = "new";
 
