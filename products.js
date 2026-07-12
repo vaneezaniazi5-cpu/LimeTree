@@ -2,7 +2,7 @@ const products = [
 
 {
     name: "Maria. B. Lawn MPT 3010-A",
-    category: ["summer","sale"],
+    category: ["summer", "sale"],
     fabric: "Double Shaded Printed Lawn Shirt<br>Printed Chiffon Dupatta<br>Printed Trouser",
     price: 3950,
     oldPrice: 5750,
@@ -13,7 +13,7 @@ const products = [
 
 {
     name: "Maria. B. Lawn MPT 3010-B",
-    category: ["summer","sale"],
+    category: ["summer", "sale"],
     fabric: "Double Shaded Printed Lawn Shirt<br>Printed Chiffon Dupatta<br>Printed Trouser",
     price: 3950,
     oldPrice: 5750,
@@ -42,15 +42,17 @@ const products = [
     badge: "",
     front: "images/Ramsha-lawn-RS02.jpg",
     back: "images/Ramsha-lawn-RS02(2).jpg"
-}
+},
+
 {
     name: "Qalamkar Chikankari SA-09",
     category: ["summer", "sale"],
-    fabric: "Shirt: Cotton | Trouser: Cotton | Dupatta: Net",
+    fabric: "Shirt: Cotton<br>Trouser: Cotton<br>Dupatta: Net",
     price: 7999,
     oldPrice: 16790,
     badge: "SALE",
     front: "images/qalamqar-sa-09(1).jpg",
     back: "images/qalamqar-sa-09(2).jpg"
-},
+}
+
 ];
