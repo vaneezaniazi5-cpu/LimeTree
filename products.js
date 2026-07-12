@@ -63,6 +63,14 @@ const products = [
     badge: "SALE",
     front: "elaf-chickenkari(1).jpg",
     back: "elaf-chickenkari(2).jpg"
+    },
+    {
+  name: "Mahnur Meherma",
+  category: ["summer"],
+  fabric: "Shirt: Heavy Embroidered Cotton Chickenkari<br>Trouser: Plain Dyed Cotton<br>Dupatta: Heavy Embroidered Organza",
+  price: 5250,
+  front: "mahnur-meherma(1).jpg",
+  back: "mahnur-meherma(2).jpg"
     }
 
 ];
