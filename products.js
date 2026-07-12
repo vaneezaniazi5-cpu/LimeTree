@@ -51,8 +51,8 @@ const products = [
     price: 7999,
     oldPrice: 16790,
     badge: "SALE",
-    front: "images/qalamqar-sa-09(1).jpg",
-    back: "images/qalamqar-sa-09(2).jpg"
+    front: "images/Qalamqar-sa-09(1).jpg",
+    back: "images/qalamqar-sa-09 (2).jpg"
 }
 
 ];
