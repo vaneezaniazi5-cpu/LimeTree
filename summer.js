@@ -46,9 +46,11 @@ ${product.oldPrice ? `<del>Rs. ${product.oldPrice}</del><br>` : ""}
 
 </p>
 
-<button class="btn"
+<div class="product-buttons">
+
+<button class="cart-btn"
 onclick="addToCart('${product.name}',${product.price})">
-Add to Cart
+🛒 Cart
 </button>
 
 <a class="btn"
@@ -60,6 +62,59 @@ Order Now
 
 </div>
 
+</div>
+
 `;
 
 });
+
+initializeSliders();
+
+function initializeSliders(){
+
+document.querySelectorAll(".slider").forEach(slider=>{
+
+const slides = slider.querySelectorAll(".slide");
+
+let current = 0;
+
+function showSlide(index){
+slides.forEach((slide,i)=>{
+slide.style.display = i===index ? "block" : "none";
+});
+}
+
+showSlide(current);
+
+slider.addEventListener("click",function(){
+current=(current+1)%slides.length;
+showSlide(current);
+});
+
+let startX=0;
+
+slider.addEventListener("touchstart",e=>{
+startX=e.touches[0].clientX;
+});
+
+slider.addEventListener("touchend",e=>{
+
+let endX=e.changedTouches[0].clientX;
+
+if(Math.abs(startX-endX)>40){
+
+if(endX<startX){
+current=(current+1)%slides.length;
+}else{
+current=(current-1+slides.length)%slides.length;
+}
+
+showSlide(current);
+
+}
+
+});
+
+});
+
+    }
