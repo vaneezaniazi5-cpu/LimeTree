@@ -53,6 +53,16 @@ const products = [
     badge: "SALE",
     front: "images/Qalamqar-sa-09(1).jpg",
     back: "images/qalamqar-sa-09 (2).jpg"
-}
+},
+    {
+    name: "Elaf Chikankari MayaAli",
+    category: ["summer", "sale"],
+    fabric: "Shirt: Heavy Embroidered Cotton Chickenkari<br>Trouser: Plain Dyed Cotton<br>Dupatta: Dyed Organza",
+    price: 6999,
+    oldPrice: 11500,
+    badge: "SALE",
+    front: "elaf-chickenkari(1).jpg",
+    back: "elaf-chickenkari(2).jpg"
+    }
 
 ];
