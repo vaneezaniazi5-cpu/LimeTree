@@ -70,7 +70,7 @@ const products = [
   fabric: "Shirt: Heavy Embroidered Cotton Chickenkari<br>Trouser: Plain Dyed Cotton<br>Dupatta: Heavy Embroidered Organza",
   price: 5250,
   front: "images/mahnur-meherma (1).jpg",
-  back: "images/mahnur.meherma(2).jpg"
+  back: "images/mahnur_meherma(2).jpg"
     }
 
 ];
