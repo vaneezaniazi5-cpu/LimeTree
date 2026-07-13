@@ -91,6 +91,16 @@ const products = [
   badge: "SALE",
   front: "florance-jade(1).jpg",
   back: "florance-jade(2).jpg"
+    },
+    {
+  name: "Sapphire Hania",
+  category: ["summer", "sale"],
+  fabric: "Shirt: Lawn Embroidered<br>Trouser: Lawn Embroidered<br>Dupatta: Voil Lawn Printed",
+  price: 3550,
+  oldPrice: 7199,
+  badge: "SALE",
+  front: "sapphire-hania(1).jpg",
+  back: "sapphire-hania(2).jpg"
     }
 
 ];
