@@ -71,6 +71,16 @@ const products = [
   price: 5250,
   front: "images/mahnur-meherma (1).jpg",
   back: "images/mahnur_meherma(2).jpg"
+    },
+    {
+  name: "Aneelas Momina",
+  category: ["summer", "sale"],
+  fabric: "Shirt: Heavy Embroidered Cotton Chickenkari<br>Trouser: Plain Cotton<br>Dupatta: Heavy Embroidered Organza",
+  price: 6250,
+  oldPrice: 12500,
+  badge: "SALE",
+  front: "aneelas-momina(1).jpg",
+  back: "aneelas-momina(2).jpg"
     }
 
 ];
