@@ -81,6 +81,16 @@ const products = [
   badge: "SALE",
   front: "aneelas-momina(1).jpg",
   back: "aneelas-momina(2).jpg"
+    },
+    {
+  name: "Florance Jade",
+  category: ["summer", "sale"],
+  fabric: "Shirt: Lawn Chickenkari Embroidered<br>Trouser: Dyed Plain Lawn<br>Dupatta: Voil Lawn Printed",
+  price: 4200,
+  oldPrice: 6499,
+  badge: "SALE",
+  front: "florance-jade(1).jpg",
+  back: "florance-jade(2).jpg"
     }
 
 ];
