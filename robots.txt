@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vaneezaniazi5-cpu.github.io/LimeTree/sitemap.xml
