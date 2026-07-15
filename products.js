@@ -79,8 +79,8 @@ const products = [
   price: 6250,
   oldPrice: 12500,
   badge: "SALE",
-  front: "aneelas-momina(1).jpg",
-  back: "aneelas-momina(2).jpg"
+  front: "images/aneelas-momina(1).jpg",
+  back: "images/aneelas-momin(2).jpg"
     },
     {
   name: "Florance Jade",
@@ -89,8 +89,8 @@ const products = [
   price: 4200,
   oldPrice: 6499,
   badge: "SALE",
-  front: "florance-jade(1).jpg",
-  back: "florance-jade(2).jpg"
+  front: "images/florance-jade(1).jpg",
+  back: "images/florance-jade(2).jpg"
     },
     {
   name: "Sapphire Hania",
@@ -99,8 +99,8 @@ const products = [
   price: 3550,
   oldPrice: 7199,
   badge: "SALE",
-  front: "sapphire-hania(1).jpg",
-  back: "sapphire-hania(2).jpg"
+  front: "images/sapphire-hania(1).jpg",
+  back: "images/sapphire-hania(2).jpg"
     }
 
 ];
